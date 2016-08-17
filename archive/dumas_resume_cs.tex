@@ -1,0 +1,191 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[letterpaper,11pt]{article}
+
+%A Few Useful Packages
+\usepackage{marvosym}
+\usepackage{fontspec} 					%for loading fonts
+\usepackage{xunicode,xltxtra,url,parskip} 	%other packages for formatting
+\RequirePackage{color,graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+%\usepackage[big]{layaureo} 
+%\usepackage{fullpage}				%better formatting of the A4 page
+\usepackage[left=1.3cm,top=0.8cm,right=1.3cm,bottom=0.8cm,nohead,nofoot]{geometry} 
+% an alternative to Layaureo can be ** \usepackage{fullpage} **
+\usepackage{tabularx}
+\usepackage{titlesec}					%custom \section
+\usepackage{paralist}
+\usepackage{multicol}
+
+%Setup hyperref package, and colours for links
+\usepackage[bookmarks, colorlinks, breaklinks, pdftitle={Andrew Dumas Resume},pdfauthor={Andrew P. Dumas}]{hyperref}  
+\definecolor{linkcolour}{rgb}{0.149, 0.545, 0.824}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour, linkcolor=linkcolour}
+
+%FONTS
+\defaultfontfeatures{Mapping=tex-text} % converts LaTeX specials (``quotes'' --- dashes etc.) to unicode
+\setromanfont [Ligatures={Common}, Numbers={OldStyle}]{Hoefler Text}
+\setmonofont[Scale=0.8]{Monaco} 
+\setsansfont[Scale=0.9]{Optima Regular} 
+% ---- CUSTOM AMPERSAND
+\newcommand{\amper}{{\fontspec[Scale=.95]{Hoefler Text}\selectfont\itshape\&}}
+
+%CV Sections inspired by: 
+%http://stefano.italians.nl/archives/26
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{3pt}{3pt}
+%Tweak a bit the top margin
+%\addtolength{\voffset}{-0.3cm}
+
+
+%-------------WATERMARK TEST [**not part of a CV**]---------------
+\usepackage[absolute]{textpos}
+
+\setlength{\TPHorizModule}{30mm}
+\setlength{\TPVertModule}{\TPHorizModule}
+\textblockorigin{2mm}{0.65\paperheight}
+\setlength{\parindent}{0pt}
+
+%--------------------BEGIN DOCUMENT----------------------
+\begin{document}
+
+
+
+\pagestyle{empty} % non-numbered pages
+
+\font\fb=''[cmr10]'' %for use with \LaTeX command
+
+%--------------------TITLE-------------
+\par{\centering
+		{\huge Andrew P. \textsc{Dumas}
+	}\par}
+
+%--------------------SECTIONS-----------------------------------
+%Section: Contact Info
+\begin{flushright}
+\begin{tabular}{rl}
+    \textsc{address:}   & 139 Magazine Street, Apt.\#2 \textbullet\ Cambridge, MA 02139 \\
+    \textsc{cell:}     & (508)-631-6216\\
+    \textsc{email:}     & \href{mailto:apdumas@gmail.com}{apdumas@gmail.com}
+\end{tabular}
+\end{flushright}
+
+
+
+%Section: Work Experience
+\vspace{-0.2cm}
+\section{Work Experience}
+\begin{tabular}{r|p{14.5cm}}
+%% Want to make dates on two lines to make first column tighter ####
+    \textsc{July 2012-present} & Signal Processing Engineer, \textsc{MIT Lincoln Laboratory}, Lexington, MA \\&\emph{Bioengineering Systems and Technologies Group}\\&\footnotesize{Data analysis on a wide range of biomedical projects involving real-time MRI of speech, auditory physiology, gait during load carriage using wearable sensors, and thermal heat strain. Coordinated internal data format and organization for human subjects data collections. Introduced and implemented code organization within algorithms development team using Subversion. Architected user interfaces for sponsor demonstrations of algorithms development. }\\\multicolumn{2}{c}{} \vspace{-0.2cm}\\
+\textsc{July 2010-Jul. '12} & Research Technologist, \textsc{Massachusetts General Hospital}, Charlestown, MA \\&\emph{Hemorrhagic Stroke Research Program and Athinoula A. Martinos Center for Biomedical Imaging}\\&\footnotesize{Conducted research investigating decreased vascular reactivity in Cerebral Amyloid Angiopathy using functional MRI to model hemodynamic response. Conceptualized and implemented algorithms for non-linear curve fitting, general linear models, ROI activation detection using hemodynamic power spectrum, and 3D image segmentation using Gaussian mixture modeling. }\\\multicolumn{2}{c}{} \vspace{-0.2cm}\\
+\textsc{June 2010-Aug. '10} & Research Student, \textsc{Beth Israel Deaconess Medical Center}, Boston, MA \\&\emph{Cardiac MRI Department}\\&\footnotesize{Created and tested algorithms to map T1 (longitudinal relaxation time constant) in phantoms and in human cardiac tissue, with emphasis on algorithm speed and robustness. Initiated development of rapid imaging techniques to reduce acquisition time.}\\\multicolumn{2}{c}{} \vspace{-0.2cm} \\
+%\textsc{June 2008-May '09} & IT Staff Assistant, \textsc{Boston University}, Boston, MA \\&\emph{ Department of Electrical and Computer Engineering}\\&\footnotesize{Set up and managed three instructional computing labs (up to 120 workstations and 10 networked printers). Developed multiple silent software installations over the network using Group Policy, and shell scripting.}\\
+\end{tabular}
+
+%% ADD PUBLICATIONS SECTION ####
+
+%Section: Education
+\vspace{-0.2cm}
+%%Want to move everything together towards the middle ####
+\section{Education}
+\hspace{5mm}
+\begin{tabular*}{0.9\textwidth}{@{\extracolsep{\fill}} ll}	
+MA, \textsc{Biomedical Imaging} & \hfill \textbf{Boston University}, Boston, MA\\
+\hspace{2mm} Graduated \textsc{Aug.} 2010 \normalsize \hspace{3mm}  & \hspace{2mm} \emph{School of Graduate Medical Sciences}\\
+BS, \textsc{Biomedical Engineering } & \hfill \normalsize\textbf{Boston University}, Boston, MA\\
+\hspace{2mm} Graduated \textsc{May} 2009 \normalsize  \hspace{3mm} & \hspace{2mm} \emph{College of Engineering} \\
+\hspace{3mm}{\normalsize Member, \textsl{Alpha Eta Mu Beta} (Biomedical Engineer Honor Society)}
+\end{tabular*}
+
+%Section: Relevant Coursework
+%\vspace{-0.2cm}
+ \section{Relevant Coursework} 
+\begin{center}
+\footnotesize
+\begin{tabular}{p{0.3\textwidth}p{0.3\textwidth}p{0.3\textwidth}}
+Applied Bioinformatics & Biological \&  Environmental Acoustics & Biomedical Signal Measurement\\
+Control Systems & Engineering Economics & Head and Neck Anatomy\\
+Imaging Theory \& Image Processing & Logic Design using Verilog & Methods of Functional Neuroimaging\\
+Signals and Systems & Solid Biomechanics & Intellectual Assets\\
+\end{tabular}
+\end{center}
+
+%Section: Publications
+%\vspace{-0.2cm}
+\section{Publications}
+\emph{Functional MRI detection of vascular reactivity in cerebral amyloid angiopathy}, Annals of Neurology, 2012\\
+\emph{Development of an offline tool for susceptibility weighted image (SWI) processing using \textsc{Matlab}}, Master's thesis, Boston University School of Graduate Medical Sciences, 2010
+
+\footnotesize{See Google Scholar Author Citation page (\url{http://goo.gl/l1KOeV}) for additional publications.}
+%\emph{Cerebral Amyloid Angiopathy Burden Associated with Leukoaraiosis:a PET/MRI Study}, Annals of Neurology, 2013\\
+%\textsc{2011} Annual Massachusetts ADRC \& Boston University ADC Poster Session \\
+%\textsc{2011} & International Stroke Conference, Guided Poster Session \\
+
+
+%Section: Computer Skills
+%\vspace{-0.3cm}
+\section{\texorpdfstring{Computer \amper \ Technical Skills}{Computer and Technical Skills}}
+\begin{tabularx}{\textwidth}{rX}
+\textsc{Computing:} & Linux**, Subversion**, Git* \\
+\textsc{Languages:} & Matlab*** (GUI development, statistical analysis, machine learning, visualization), BASH shell scripting**, Mathematica**, Perl**,\LaTeX**, Java*, C++*\\
+%\textsc{Data science:} & Gaussian mixture modeling, SVM, neural networks
+\textsc{Electronics:} & Arduino microcontroller programming, breadboard circuit prototyping, electronics troubleshooting, oscilloscope operation\\
+\end{tabularx}
+
+\vspace{0.3cm}
+\tiny{*** = Expert, ** = Intermediate, * = Beginner}
+%\textsc{Imaging:} & MRI scanner operation and image acquisition (structural, MR Spectroscopy, fMRI), statistical / morphometric analysis packages (FreeSurfer, FSL, SPM8)\\
+
+
+
+\end{document}
+
+%EXTRA EXTRA EXTRA:
+
+
+%Section: Project Experience
+% \textsc{ } & \small{\emph{}} \\
+% & \footnotesize{}\\
+\vspace{-0.2cm}
+\section{Project Experience}
+\begin{tabular}{r|p{14.5cm}}
+\textsc{2013} & \small{\emph{Algorithms for anomalous gait detection and characterization using wearable sensors}} \\
+\textsc{2013} & \small{\emph{Speaker analysis of real-time MRI}} \\
+%\textsc{2012} & \small{\emph{Functional MRI detection of vascular reactivity in cerebral amyloid angiopathy}} \\
+ % & \footnotesize{Created algorithms to obtain hemodynamic response in primary visual cortex from functional MR images as an indicator of CAA pathology.}\\
+\textsc{2010} & \small{\emph{Development of an offline tool for susceptibility weighted image (SWI) processing}} \\
+ & \footnotesize{Developed a tool to process T2*-weighted MR images to enhance susceptibility weighted contrast and tested the algorithm on images acquired with custom sequences. Created a GUI to facilitate offline processing.}\\
+%\textsc{Sep. '08-May '10} & \small{\emph{Simulating Echolocation using Computational Models of Auditory Physiology}} \\
+%\textsl{Senior Project} & \footnotesize{Prototyped algorithms to estimate object distance and classify object based on model generated from previously acquired ultrasonic data.}
+\end{tabular}
+
+%Section: OBJECTIVE
+\vspace{-0.5cm}
+\section{Objective}
+To obtain a job developing innovative medical devices utilizing my experience in the fields of biomedical engineering and imaging involving analog and digital electronics design, leveraging my background in Matlab as well as signal and image processing knowledge, and my strong desire to learn new skills.
+
+%from project experience:
+ \textsc{Sep '08-May '09} & \small{\emph{“Simulating Echolocation using Computational Models of Auditory Physiology”}}  \\ 
+ \textsl{Senior Project} &\footnotesize{\textbf{Description:} The aim of this project was to obtain data using an ultrasonic emitter to mimic echolocation and to process the signals using existing auditory models. The simulation estimated target range and azimuth relative to the sound source, and attempted to identify the object using a spectrogram correlation algorithm.}\\\multicolumn{2}{c}{} \\
+ 
+ 
+ Applied Bioinformatics & Biological \&  Environmental Acoustics\\
+Biomedical Measurement Lab & Control Systems \\
+Head and Neck Anatomy & Imaging Theory \& Image Processing\\
+Intellectual Assets: Creation, Protection, and Commercialization & Logic Design\\
+Methods of Functional Neuroimaging & Signals and Systems\\
+Solid Biomechanics
+ 
+%WATERMARK TEST [**not part of a CV**]---------------
+\font\wm=''Baskerville:color=787878'' at 8pt
+\font\wmweb=''Baskerville:color=FF1493'' at 8pt
+{\wm 
+	\begin{textblock}{1}(0,0)
+		\rotatebox{-90}{\parbox{500mm}{
+			Typeset by Andrew Dumas with \XeTeX\  \today\
+		}
+	}
+	\end{textblock}
+}
