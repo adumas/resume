@@ -9,9 +9,9 @@
 \usepackage{xunicode,xltxtra,url,parskip} 	%other packages for formatting
 \RequirePackage{color,graphicx}
 \usepackage[usenames,dvipsnames]{xcolor}
-%\usepackage[big]{layaureo} 
+%\usepackage[big]{layaureo}
 %\usepackage{fullpage}				%better formatting of the A4 page
-\usepackage[left=1.3cm,top=0.8cm,right=1.3cm,bottom=0.8cm,nohead,nofoot]{geometry} 
+\usepackage[left=1.3cm,top=0.8cm,right=1.3cm,bottom=0.8cm,nohead,nofoot]{geometry}
 % an alternative to Layaureo can be ** \usepackage{fullpage} **
 \usepackage{tabularx}
 \usepackage{titlesec}					%custom \section
@@ -19,19 +19,19 @@
 \usepackage{multicol}
 
 %Setup hyperref package, and colours for links
-\usepackage[bookmarks, colorlinks, breaklinks, pdftitle={Andrew Dumas Resume},pdfauthor={Andrew P. Dumas}]{hyperref}  
+\usepackage[bookmarks, colorlinks, breaklinks, pdftitle={Andrew Dumas Resume},pdfauthor={Andrew P. Dumas}]{hyperref}
 \definecolor{linkcolour}{rgb}{0,0,0}
 \hypersetup{colorlinks,breaklinks,urlcolor=linkcolour, linkcolor=linkcolour}
 
 %FONTS
 \defaultfontfeatures{Mapping=tex-text} % converts LaTeX specials (``quotes'' --- dashes etc.) to unicode
 \setromanfont [Ligatures={Common}, Numbers={OldStyle}]{Hoefler Text}
-\setmonofont[Scale=0.8]{Monaco} 
-\setsansfont[Scale=0.9]{Optima Regular} 
+\setmonofont[Scale=0.8]{Monaco}
+\setsansfont[Scale=0.9]{Optima Regular}
 % ---- CUSTOM AMPERSAND
 \newcommand{\amper}{{\fontspec[Scale=.95]{Hoefler Text}\selectfont\itshape\&}}
 
-%CV Sections inspired by: 
+%CV Sections inspired by:
 %http://stefano.italians.nl/archives/26
 \titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
 \titlespacing{\section}{0pt}{3pt}{3pt}
@@ -65,7 +65,7 @@
 %Section: Contact Info
 \begin{flushright}
 \begin{tabular}{rl}
-    \textsc{address:}   & 139 Magazine Street, Apt.\#2 \textbullet\ Cambridge, MA 02139 \\
+    \textsc{address:}   & 31 Cherry Street, Apt.\#3 \textbullet\ Somerville, MA 02144 \\
     \textsc{cell:}     & (508)-631-6216\\
     \textsc{email:}     & \href{mailto:apdumas@gmail.com}{apdumas@gmail.com}
 \end{tabular}
@@ -91,7 +91,7 @@
 %%Want to move everything together towards the middle ####
 \section{Education}
 \hspace{5mm}
-\begin{tabular*}{0.9\textwidth}{@{\extracolsep{\fill}} ll}	
+\begin{tabular*}{0.9\textwidth}{@{\extracolsep{\fill}} ll}
 MA, \textsc{Biomedical Imaging} & \hfill \textbf{Boston University}, Boston, MA\\
 \hspace{2mm} Graduated \textsc{Aug.} 2010 \normalsize \hspace{3mm}  & \hspace{2mm} \emph{School of Graduate Medical Sciences}\\
 BS, \textsc{Biomedical Engineering } & \hfill \normalsize\textbf{Boston University}, Boston, MA\\
@@ -101,7 +101,7 @@ BS, \textsc{Biomedical Engineering } & \hfill \normalsize\textbf{Boston Universi
 
 %Section: Relevant Coursework
 \vspace{-0.2cm}
- \section{Relevant Coursework} 
+ \section{Relevant Coursework}
 \begin{center}
 \footnotesize
 \begin{tabular}{p{0.3\textwidth}p{0.3\textwidth}p{0.3\textwidth}}
@@ -154,21 +154,21 @@ Signals and Systems & Solid Biomechanics & Intellectual Assets\\
 To obtain a job developing innovative medical devices utilizing my experience in the fields of biomedical engineering and imaging involving analog and digital electronics design, leveraging my background in Matlab as well as signal and image processing knowledge, and my strong desire to learn new skills.
 
 %from project experience:
- \textsc{Sep '08-May '09} & \small{\emph{“Simulating Echolocation using Computational Models of Auditory Physiology”}}  \\ 
+ \textsc{Sep '08-May '09} & \small{\emph{“Simulating Echolocation using Computational Models of Auditory Physiology”}}  \\
  \textsl{Senior Project} &\footnotesize{\textbf{Description:} The aim of this project was to obtain data using an ultrasonic emitter to mimic echolocation and to process the signals using existing auditory models. The simulation estimated target range and azimuth relative to the sound source, and attempted to identify the object using a spectrogram correlation algorithm.}\\\multicolumn{2}{c}{} \\
- 
- 
+
+
  Applied Bioinformatics & Biological \&  Environmental Acoustics\\
 Biomedical Measurement Lab & Control Systems \\
 Head and Neck Anatomy & Imaging Theory \& Image Processing\\
 Intellectual Assets: Creation, Protection, and Commercialization & Logic Design\\
 Methods of Functional Neuroimaging & Signals and Systems\\
 Solid Biomechanics
- 
+
 %WATERMARK TEST [**not part of a CV**]---------------
 \font\wm=''Baskerville:color=787878'' at 8pt
 \font\wmweb=''Baskerville:color=FF1493'' at 8pt
-{\wm 
+{\wm
 	\begin{textblock}{1}(0,0)
 		\rotatebox{-90}{\parbox{500mm}{
 			Typeset by Andrew Dumas with \XeTeX\  \today\
