@@ -1,6 +1,7 @@
 
 # all latex files
 
+*.pdf
 *.log
 *.aux
 *.out
